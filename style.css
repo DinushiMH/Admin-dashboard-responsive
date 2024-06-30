@@ -16,7 +16,7 @@
     --color-danger-light: rgb(255,67, 54, 0.2);
     --color-purple-light: rgb(160, 99, 245, 0.2);
 
-    --card-padding: 1.6rem;
+    --card-padding: 1.8rem;
     --padding-1: 1rem;
     --padding-2: 8px;
 
@@ -109,6 +109,18 @@ small{
     background: #27282f;
     box-shadow: 0 0.8rem 0.8rem rbga(0, 0, 0, 0.2);
 }
+.bg-purple-light{
+    background: var(--color-purple-light);
+}
+.bg-danger-light{
+    background: var(--color-danger-light);
+}
+.bg-primary-light{
+    background: var(--color-primary-light);
+}
+.bg-success-light{
+    background: var(--color-success-light);
+}
 /*========= nav bar ===========*/
 nav{
     width: 100%;
@@ -195,6 +207,7 @@ main{
     gap: 2rem;
     width: 96%;
     margin: 1rem auto 4rem;
+    /* padding-left: 10px; */
 }
 main aside{
     display: flex;
@@ -270,7 +283,7 @@ main aside .sidebar h4{
  }
  /*============== MIDDLE ===============*/
  main section.middle{
-    width: 65%;
+    width: 60%;
  }
  main section.middle .header{
     display: flex;
@@ -300,6 +313,7 @@ main aside .sidebar h4{
     justify-content: space-between;
     box-shadow: 0 2rem 3rem var(--color-danger-light);
     transition: all 300ms ease;
+    max-width: 22rem;
    
  } 
 main section.middle .cards .card:nth-child(2){
@@ -417,5 +431,82 @@ main section.middle .cards .card:nth-child(2){
     margin-top: 2rem;
     border-radius: var(--card-board-redius);
     padding: var(--card-padding);
- } 
+ }
+/*======== INVESTMENT =========*/
+main section.right .investments{
+    background: var(--color-white);
+    border-radius: var(--card-board-redius);
+}
+main section.right .investments img{
+    width: 2.4rem;
+}
+main section.right .investments .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    padding-bottom: 0;
+    
+}
+main section.right .investments .header a{
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+main section.right .investments .investment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    border-bottom: 1px solid var(--color-light);
+}
+main section.right .investments .investment:last-child{
+    border: none;
+}
+main section.right .investments .investment:hover{
+    background: var(--color-light);
+    cursor: pointer;
+}
 
+/*====================== RECENT TRANSACTIONS ========================*/
+main .recent-transactions{
+    margin-top: 2rem;
+}
+main .recent-transactions img{
+    width: 2.2rem;
+}
+main .recent-transactions .transaction{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem var(--card-padding);
+    border-radius: var(--card-board-redius);
+    transition: all 300ms ease;
+}
+main .recent-transactions .transaction:hover{
+    background: var(--color-white);
+    cursor: pointer;
+}
+main .recent-transactions .transaction .service{
+    display: flex;
+    gap: 1rem;
+}
+main .recent-transactions .transaction .service .icon{
+    padding: var(--padding-2);
+    border-radius: var(--board-redius-1);
+    display: flex;
+    align-items: center;
+}
+main .recent-transactions .card-details{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+main .recent-transactions .card-details .card{
+    display: flex;
+    width: 4.6rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--board-redius-2);
+}
