@@ -24,6 +24,14 @@
     --board-redius-1: 1rem;
     --board-redius-2: 6px;
 }
+/* dark theme variables */
+.dark-theme{
+    --color-white: #131316;
+    --color-light: #23232a;
+    --color-dark: #addd;
+    --color-gary-dark: #abacd5;
+
+}
 
 *{
     margin: 0;
@@ -475,6 +483,15 @@ main .recent-transactions{
 main .recent-transactions img{
     width: 2.2rem;
 }
+main .recent-transactions .header{
+    display: flex;
+    margin-bottom: 1rem;
+}
+main .recent-transactions .header a{
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
 main .recent-transactions .transaction{
     display: flex;
     align-items: center;
@@ -509,4 +526,88 @@ main .recent-transactions .card-details .card{
     align-items: center;
     justify-content: center;
     border-radius: var(--board-redius-2);
+}
+
+/*====================== MEDIA QUERIES FOR TABLETS ========================*/
+@media  screen and (max-width: 1024px) {
+    nav .search-bar{
+        display: none;
+    }
+    nav .profile-area {
+        gap: 2rem;
+    }
+    nav .profile-area button#menu-btn{
+        display: inline;
+        background: transparent;
+        color: var(--color-drak);
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    main aside{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 3;
+        background: var(--color-white);
+        width: 22rem;
+        height: 100vh;
+        box-shadow: 2rem 0 2rem var(--color-primary-light);
+        display: none;
+        animation: showSidebar 500ms ease forwards;
+    }
+    @keyframes showSidebar {
+        to{
+            left: 0;
+        }
+    }
+    main aside button#close-btn{
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 4;
+        background: transparent;
+        color: var(--color-drak);
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    main aside .sidebar{
+        margin-top: 4rem;
+    }
+    main aside .updates{
+        display: none;
+    }
+    main section.middle .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    main canves{
+        margin: 3rem 0 1rem;
+    }
+    main section.right .recent-transactions{
+        margin-top: 3rem;
+    }
+}
+
+/*====================== MEDIA QUERIES FOR MOBILE PHONES ========================*/
+@media screen and (max-width:600px) {
+    nav .profile-area{
+        gap: 2.6rem;
+    }
+    nav .profile h5, nav .profile span{
+        display: none;
+    }
+    main section.middle .cards{
+        grid-template-columns: 1fr;
+    }
+    main section.middle .Fast-payment{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 3rem;
+        gap: 1.4rem;
+    }
+    
 }
